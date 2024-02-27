@@ -1,0 +1,30 @@
+log:
+  level: DEBUG
+
+providers:
+  docker:
+    exposedbydefault: false
+    network: proxynet
+
+entrypoints:
+  web:
+    address: :80
+    http:
+      redirections:
+        entrypoint:
+          to: websec
+          scheme: https
+  websec:
+    address: :443
+    http:
+      tls:
+        certresolver: le
+
+certificatesresolvers:
+  le:
+    acme:
+      email: xopco@yandex.ru
+      storage: /letsencrypt/acme.json
+      httpchallenge:
+        entrypoint: web
+      
