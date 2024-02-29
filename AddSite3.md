@@ -16,4 +16,6 @@ nginx-site3:
 ```
 3. Create site3 directory in your poject directory
 4. Create or put index.html file in your site3 directory
-5. `docker-compose down && docker-compose up -d`
+   ```
+   docker-compose down && docker-compose up -d
+   ```
