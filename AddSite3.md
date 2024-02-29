@@ -1,5 +1,6 @@
 # How to add Site3 in your project
-1. Copy this fragment into docker-compose.yml 
+1. 
+2. Copy this fragment into docker-compose.yml 
 ```
 nginx-site3:
     image: nginx:latest
@@ -13,6 +14,6 @@ nginx-site3:
     volumes:
       - ./site3/:/usr/share/nginx/html
 ```
-2. Create site3 directory in your poject directory
-3. Create index.html file in your site3 directory
-4. Docker
+3. Create site3 directory in your poject directory
+4. Create or put index.html file in your site3 directory
+5. `docker-compose down && docker-compose up -d`
