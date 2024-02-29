@@ -1,5 +1,5 @@
 # How to add Site3 in your project
-1. 
+1. Add DNS A record
 2. Copy this fragment into docker-compose.yml 
 ```
 nginx-site3:
